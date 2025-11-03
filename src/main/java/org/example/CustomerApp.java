@@ -23,8 +23,6 @@ public class CustomerApp {
             System.out.println("Enter name:");
             String name = sc.nextLine();
 
-
-
             int customerId;
             while(true){
                 System.out.println("Enter customerId:");
