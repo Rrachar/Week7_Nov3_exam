@@ -23,12 +23,6 @@ public class CustomerApp {
             System.out.println("Enter name:");
             String name = sc.nextLine();
 
-            System.out.println("Enter email:");
-            String email = sc.nextLine();
-
-            System.out.println("Enter phone:");
-            int phoneNumber = sc.nextInt();
-
             int customerId;
             while(true){
                 System.out.println("Enter customerId:");
@@ -44,6 +38,15 @@ public class CustomerApp {
                 }
                 if(!duplicate)break;
             }
+
+            System.out.println("Enter email:");
+            String email = sc.nextLine();
+
+            sc.nextLine();
+
+            System.out.println("Enter phone:");
+            int phoneNumber = sc.nextInt();
+
 
             Customer customer = new Customer(name,customerId,email,phoneNumber);
             customers.add(customer);
