@@ -8,6 +8,7 @@ package org.example;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+
 public class CustomerApp {
     public static void main(String[] args) {
         ArrayList<Customer> customers = new ArrayList<>();
@@ -22,25 +23,27 @@ public class CustomerApp {
             System.out.println("Enter name:");
             String name = sc.nextLine();
 
+            System.out.println("Enter email:");
+            String email = sc.nextLine();
+
+            System.out.println("Enter phone:");
+            int phoneNumber = sc.nextInt();
+
             int customerId;
             while(true){
                 System.out.println("Enter customerId:");
                 customerId = sc.nextInt();
 
                 boolean duplicate = false;
-                for (Customer c = customers){
-                    if(c.getCustomerID().equalsIgnoreCase(customerId)){
+                for (Customer c:customers) {
+                    if(c.getCustomerId()==(customerId)){
                         System.out.println("CustomerID already exists!");
                         duplicate = true;
                         break;
                     }
                 }
-                if(duplicate)break;
+                if(!duplicate)break;
             }
-            System.out.println("Enter email:");
-            String email = sc.nextLine();
-            System.out.println("Enter phone:");
-            String phone = sc.nextLine();
 
             Customer customer = new Customer(name,customerId,email,phoneNumber);
             customers.add(customer);
