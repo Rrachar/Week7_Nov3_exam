@@ -50,7 +50,6 @@ public class CustomerApp {
             int phoneNumber = sc.nextInt();
 
 
-
             Customer customer = new Customer(name,customerId,email,phoneNumber);
             customers.add(customer);
             i++;
